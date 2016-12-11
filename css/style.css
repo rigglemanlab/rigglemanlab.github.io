@@ -8448,6 +8448,9 @@ img.offset {
   vertical-align: middle;
   font-size: 35px;
 }
+.post p {
+  text-align: justify;
+}
 .pi-img {
   width: 100%;
   max-width: 200px;
