@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8"/>
+  <title>Understanding soft glassy materials using an energy landscape approach</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- RSS feed -->
+  <link rel="alternate" type="application/rss+xml" title="Riggleman Research Lab"
+  href="http://rrgroup.seas.upenn.edu/feed.xml">
+
+  <!-- Customized Bootstrap + Font Awesome + Solarized -->
+  <link href="/css/style.css" rel="stylesheet" media="screen">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/images/favicon.png"/>
+
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-26220778-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+  <!-- END Google Analytics -->
+
+  <!-- jQuery -->
+  <script src="/js/jquery.min.js"></script>
+
+  <!-- Bootstrap -->
+  <script src="/js/transition.js"></script>
+  <script src="/js/collapse.js"></script>
+
+  <!-- Custom script to put footer at bottom even if post is short -->
+  <!-- also controls color of footer logo on mouseover -->
+  <script src="/js/footer.js"></script>
+
+</head>
+
+<body>
+
+  <div id="header">
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-element" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Riggleman Lab</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse-element">
+          <ul class="nav navbar-nav navbar-right">
+            
+            <li>
+            
+              <a href="/research/">Research</a>
+            </li>
+            
+            <li class="active">
+            
+              <a href="/publications/">Publications</a>
+            </li>
+            
+            <li>
+            
+              <a href="/code/">Code</a>
+            </li>
+            
+            <li>
+            
+              <a href="/members/">Members</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div id="content-wrapper">
+    <div class="container">
+      <div class="row">
+  <div class="col-md-12">
+    <div class="media">
+      
+      <img class="pull-left pad-right media-object" width=170 src="/images/publications/hwang-glassy-materials.png">
+      
+      <div class="media-body">
+        <h1>
+          
+          <a class="off" href="http://dx.doi.org/10.1038/nmat4663">
+            Understanding soft glassy materials using an energy landscape approach
+          </a>
+          
+        </h1>
+        <div class="smallhead">
+          
+
+  
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+        
+        
+    
+    
+      <a class="off" href="/members/jennifer-hwang/">Hyun Joo Hwang</a>, 
+    
+  
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+        
+        
+    
+    
+      <a class="off" href="/members/robert-riggleman/">Robert A. Riggleman</a>, 
+    
+  
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+    
+      John C. Crocker.
+    
+  
+
+  <i> Nature Materials</i> <b>15</b>: 1031-1036 (2016)
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bigspacer"></div>
+
+<div class="row">
+  <div class="col-md-3">
+    <div class="bigspacer"></div>
+    <div class="glyphbox note">
+      
+      
+      
+      <div class="smallhead">
+        DOI
+      </div>
+      <div class="pad-left note">
+        <div class="smallspacer"></div>
+        <i class="fa fa-external-link fa-fw"></i>
+        <a class="off" href="http://dx.doi.org/10.1038/nmat4663">10.1038/nmat4663</a>
+      </div>
+      <div class="bigspacer"></div>
+      
+      
+      <div class="smallhead">
+        Source Code
+      </div>
+      <div class="pad-left note">
+        <div class="smallspacer"></div>
+        <i class="fa fa-github-alt fa-fw"></i>
+        <a class="off" href="https://github.com/hyunhw/publication">hyunhw/publication</a>
+      </div>
+      <div class="bigspacer"></div>
+      
+    </div>
+  </div>
+  <div class="col-md-8">
+    <div class="post">
+      <h2>Abstract</h2>
+      <div class="spacer"></div>
+      <p>Many seemingly different soft materials—such as soap foams, mayonnaise, toothpaste and living cells—display strikingly similar viscoelastic behaviour. A fundamental physical understanding of such soft glassy rheology and how it can manifest in such diverse materials, however, remains unknown. Here, by using a model soap foam consisting of compressible spherical bubbles, whose sizes slowly evolve and whose collective motion is simply dictated by energy minimization, we study the foam’s dynamics as it corresponds to downhill motion on an energy landscape function spanning a high-dimensional configuration space. We find that these downhill paths, when viewed in this configuration space, are, surprisingly, fractal. The complex behaviour of our model, including power-law rheology and non-diffusive bubble motion and avalanches, stems directly from the fractal dimension and energy function of these paths. Our results suggest that ubiquitous soft glassy rheology may be a consequence of emergent fractal geometry in the energy landscapes of many complex fluids.</p>
+
+
+      
+        
+        
+          
+        
+        
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+      
+        
+        
+          
+        
+          
+            
+            
+        
+          
+
+      
+      <div class="bigspacer"></div>
+      <h2>Related Research Topics</h2>
+        
+          
+          
+          
+            
+          
+          
+        
+          
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          
+        
+          
+          
+          
+            
+          
+            
+      <p>
+        <a class="off" href="/research/#topic3">
+          Dynamics of glass-forming materials
+        </a>
+      </p>
+              
+              
+          
+            
+      
+    </div>
+  </div>
+  <div class="col-md-1"></div>
+</div>
+
+    </div>
+  </div>
+
+  <div id="footer">
+    <nav class="navbar navbar-inverse text-center" role="navigation">
+      <div class="container">
+        <ul class="nav navbar-nav footernav">
+          <li>
+            <a href="/about/">About</a>
+          </li>
+          <li>
+            <a href="/contact/">Contact</a>
+          </li>
+          <li>
+            <a href="/collaborate/">Collaborate</a>
+          </li>
+          <li>
+            <a href="/join/">Join</a>
+          </li>
+        </ul>
+      </div>
+      <div id="footer-logo-box" class="container">
+        <ul class="nav navbar-nav footernav">
+          <li>
+            <a id="cbe-text" href="http://cbe.seas.upenn.edu/">
+              University of Pennsylvania</br>
+              Chemical and Biomolecular Engineering Department</br>
+            </a>
+          </li>
+        </ul>
+        <div id="footer-logo" class="center-block">
+          <a href="http://cbe.seas.upenn.edu/">
+            <img id="pennimg" src="/images/upenn-footer-logo.png">
+          </a>
+        </div>
+      </div>
+      <div class="spacer"></div>
+    </nav>
+  </div>
+
+</body>
+</html>

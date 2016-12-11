@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8"/>
+  <title>Long-range correlated dynamics in ultra-thin molecular glass films</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- RSS feed -->
+  <link rel="alternate" type="application/rss+xml" title="Riggleman Research Lab"
+  href="http://rrgroup.seas.upenn.edu/feed.xml">
+
+  <!-- Customized Bootstrap + Font Awesome + Solarized -->
+  <link href="/css/style.css" rel="stylesheet" media="screen">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/images/favicon.png"/>
+
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-26220778-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+  <!-- END Google Analytics -->
+
+  <!-- jQuery -->
+  <script src="/js/jquery.min.js"></script>
+
+  <!-- Bootstrap -->
+  <script src="/js/transition.js"></script>
+  <script src="/js/collapse.js"></script>
+
+  <!-- Custom script to put footer at bottom even if post is short -->
+  <!-- also controls color of footer logo on mouseover -->
+  <script src="/js/footer.js"></script>
+
+</head>
+
+<body>
+
+  <div id="header">
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-element" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Riggleman Lab</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse-element">
+          <ul class="nav navbar-nav navbar-right">
+            
+            <li>
+            
+              <a href="/research/">Research</a>
+            </li>
+            
+            <li class="active">
+            
+              <a href="/publications/">Publications</a>
+            </li>
+            
+            <li>
+            
+              <a href="/code/">Code</a>
+            </li>
+            
+            <li>
+            
+              <a href="/members/">Members</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div id="content-wrapper">
+    <div class="container">
+      <div class="row">
+  <div class="col-md-12">
+    <div class="media">
+      
+      <img class="pull-left pad-right media-object" width=170 src="/images/publications/zhang-correlated-dynamics.png">
+      
+      <div class="media-body">
+        <h1>
+          
+          <a class="off" href="http://dx.doi.org/10.1063/1.4962734">
+            Long-range correlated dynamics in ultra-thin molecular glass films
+          </a>
+          
+        </h1>
+        <div class="smallhead">
+          
+
+  
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+    
+      Yue Zhang, 
+    
+  
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+    
+      Ethan C. Glor, 
+    
+  
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+    
+      Mu Li, 
+    
+  
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+    
+      Tianyi Liu, 
+    
+  
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+    
+      Kareem Wahid, 
+    
+  
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+    
+      William Zhang, 
+    
+  
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+        
+        
+    
+    
+      <a class="off" href="/members/robert-riggleman/">Robert A. Riggleman</a>, 
+    
+  
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+    
+      Zahra Fakhraai.
+    
+  
+
+  <i> Journal of Chemical Physics</i> <b>145</b>: 114502 (2016)
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bigspacer"></div>
+
+<div class="row">
+  <div class="col-md-3">
+    <div class="bigspacer"></div>
+    <div class="glyphbox note">
+      
+      
+      
+      <div class="smallhead">
+        DOI
+      </div>
+      <div class="pad-left note">
+        <div class="smallspacer"></div>
+        <i class="fa fa-external-link fa-fw"></i>
+        <a class="off" href="http://dx.doi.org/10.1063/1.4962734">10.1063/1.4962734</a>
+      </div>
+      <div class="bigspacer"></div>
+      
+      
+    </div>
+  </div>
+  <div class="col-md-8">
+    <div class="post">
+      <h2>Abstract</h2>
+      <div class="spacer"></div>
+      <p>It has been previously shown that the free surface of molecular glasses has enhanced surface diffusion compared to the bulk. However, the degree by which the glass dynamics are affected by the free surface remains unexplored. Here, we measure enhanced dynamics in ultra-thin molecular glass films as a function of film thickness. We demonstrate that these films exhibit a sharp transition from glassy solid to liquid-like behavior when the thickness is reduced below 30 nm. This liquid-like behavior persists even at temperatures well below the glass transition temperature, T<sub>g</sub>. The enhanced dynamics in these films can produce large scale morphological features during physical vapor deposition and lead to a dewetting instability in films held at temperatures as low as T<sub>g</sub> − 35 K. The effective viscosity of these films are measured by monitoring the dewetting kinetics. These measurements combined with cooling-rate dependent T<sub>g</sub> measurements show that the apparent activation barrier for rearrangement decreases sharply in films thinner than 30 nm. This sharp transition in the dynamics suggests that long-range correlated dynamics exists in these films such that the enhancement induced by the free surface can strongly affect the dynamics of the film over a length scale that is ten times larger than the size of the molecules.</p>
+
+
+      
+        
+        
+          
+        
+        
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+      
+        
+        
+          
+            
+            
+        
+          
+
+      
+      <div class="bigspacer"></div>
+      <h2>Related Research Topics</h2>
+        
+          
+          
+          
+            
+          
+          
+        
+          
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          
+        
+          
+          
+          
+            
+      <p>
+        <a class="off" href="/research/#topic3">
+          Dynamics of glass-forming materials
+        </a>
+      </p>
+              
+              
+          
+            
+      
+    </div>
+  </div>
+  <div class="col-md-1"></div>
+</div>
+
+    </div>
+  </div>
+
+  <div id="footer">
+    <nav class="navbar navbar-inverse text-center" role="navigation">
+      <div class="container">
+        <ul class="nav navbar-nav footernav">
+          <li>
+            <a href="/about/">About</a>
+          </li>
+          <li>
+            <a href="/contact/">Contact</a>
+          </li>
+          <li>
+            <a href="/collaborate/">Collaborate</a>
+          </li>
+          <li>
+            <a href="/join/">Join</a>
+          </li>
+        </ul>
+      </div>
+      <div id="footer-logo-box" class="container">
+        <ul class="nav navbar-nav footernav">
+          <li>
+            <a id="cbe-text" href="http://cbe.seas.upenn.edu/">
+              University of Pennsylvania</br>
+              Chemical and Biomolecular Engineering Department</br>
+            </a>
+          </li>
+        </ul>
+        <div id="footer-logo" class="center-block">
+          <a href="http://cbe.seas.upenn.edu/">
+            <img id="pennimg" src="/images/upenn-footer-logo.png">
+          </a>
+        </div>
+      </div>
+      <div class="spacer"></div>
+    </nav>
+  </div>
+
+</body>
+</html>
