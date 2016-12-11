@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8"/>
+  <title>Dynamics of polymers under confinement</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- RSS feed -->
+  <link rel="alternate" type="application/rss+xml" title="Riggleman Research Lab"
+  href="http://rrgroup.seas.upenn.edu/feed.xml">
+
+  <!-- Customized Bootstrap + Font Awesome + Solarized -->
+  <link href="/css/style.css" rel="stylesheet" media="screen">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/images/favicon.png"/>
+
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-26220778-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+  <!-- END Google Analytics -->
+
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"">
+  </script>
+
+  <!-- jQuery -->
+  <script src="/js/jquery.min.js"></script>
+
+  <!-- Bootstrap -->
+  <script src="/js/transition.js"></script>
+  <script src="/js/collapse.js"></script>
+
+  <!-- Custom script to put footer at bottom even if post is short -->
+  <!-- also controls color of footer logo on mouseover -->
+  <script src="/js/footer.js"></script>
+
+</head>
+
+<body>
+
+  <div id="header">
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-element" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Riggleman Lab</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse-element">
+          <ul class="nav navbar-nav navbar-right">
+            
+            <li class="active">
+            
+              <a href="/research/">Research</a>
+            </li>
+            
+            <li>
+            
+              <a href="/publications/">Publications</a>
+            </li>
+            
+            <li>
+            
+              <a href="/code/">Code</a>
+            </li>
+            
+            <li>
+            
+              <a href="/members/">Members</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div id="content-wrapper">
+    <div class="container">
+      <div class="blog-post">
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+      <div class="media">
+        <div class="media-body">
+          <div class="media-heading">
+            <a href="/research/dynamics-under-confinement/" class="off">
+              <h1>Dynamics of polymers under confinement</h1>
+            </a>
+          </div>
+          <p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+
+  <div class="bigspacer"></div>
+
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+      
+      
+      <img class="offset" src="/images/research/cari.png">
+      
+      
+      <div class="post">
+        <p>Amorphous solids are ubiquitous in our daily lives, for example as polymer glasses in lenses and protective coatings or as thin organic glass films as active layers in electronic devices. Despite their wide-spread use, the basic physics of glass formation remain poorly understood. One common theme in many of the theories of glass formation, particularly the entropy theories that can be traced back to the original <a href="http://dx.doi.org/10.1063/1.1696442">Adam-Gibbs theory</a>, is that the dynamic slowdown that leads to the glass transition is accompanied by a growing dynamical length scale. The essential idea is that as the temperature is lowered, the dynamics become increasing cooperative; if more polymer segments must move together for relaxation to occur, this requires overcoming a larger energy barrier, which in turn leads to slower dynamics. This basic view has lead to many years of research studying the dynamics of glasses (primarily polymers) under nanoscale confinement. Our first independent contribution in this area was to show that confinement effects cannot be universally explained by this growing length scale. We designed a <a href="/publications/shavit-backbone-rigidity/">family of glass-forming polymers</a> that have similar extents of cooperative dynamics. Upon confinement to planar thin films, we found that the confinement effects were drastically different due to differences in the polymer structure near the interface, which strongly suggests that the extent of cooperative dynamics cannot uniquely explain the confinement effects. We later showed that for flexible polymers that do not order near the interface, this dynamic length scale may be relevant, though we were of course limited to the time scales easily accessible by molecular dynamics.</p>
+
+<p>Entangled polymers are increasingly used in highly confined geometries, and emerging applications include the formation of nanocomposites at exceptionally high nanoparticle concentrations (see the CaRI simulations in the image above) and as rheological modifiers in fracking fluids that must flow to nanoscopic pores. When the confining dimension becomes comparable to the chain dimensions, one should anticipate that the chains become deformed, potentially affecting their ability to entangle with each other. In collaboration with <a href="http://winey.seas.upenn.edu/">Prof. Karen Winey</a> (<a href="http://www.mse.seas.upenn.edu/">Penn, Materials Science and Engineering</a>), we have been investigating how nanoscale confinement affects the entanglement density and dynamics of polymers in the melt state (see <a href="http://dx.doi.org/10.1021/acs.macromol.5b00085">Tung et al.</a> and <a href="http://dx.doi.org/10.1021/ma501193f">Sussman et al.</a>). Our simulations showed that when the chains were confined to length scales below their bulk end-to-end distance, the entanglement density is reduced, and this effect is significantly more pronounced for two-dimensional confinement to nanopores. The reduction in entanglement density is reflected in a substantial increase in the diffusivity of the polymers, and we are currently working to quantitatively compare the simulations to experiments that measure chain conformation and diffusivity.</p>
+
+<p>The results of this prior work on the dynamics of amorphous and entangled polymers under nanoscale confinement will be used as a fundamental framework for our current work studying the dynamics of polymers during capillary rise infiltration (CaRI) into a dense nanoparticle packing. This method for forming polymer nanocomposites developed in the <a href="http://www.seas.upenn.edu/~leegroup/">Lee lab</a> (<a href="http://www.cbe.seas.upenn.edu/">Penn, Chemical and Biomolecular Engineering</a>) enables the scalable production of polymer nanocomposites with nanoparticle loadings above 50<script type="math/tex">%_{vol}_</script>. The pores in this nanoparticle packing are on the order of the chain dimensions, so it is unclear whether bulk dynamic properties will govern the infiltration process or the extent to which confinement effects will play a role. In <a href="/publications/shavit-capillary-rise/">our first simulations of this process</a>, we compared the infiltration dynamics of two unentangled polymer chain lengths with a characteristic size below the pore sizes and one comparable to the pore sizes. For the longer chain length, we found that polymers frequently moved through the packing in a stretch-and-hop motion to move through the tighter constrictions within the nanoparticle packing.</p>
+
+
+      </div>
+      
+      <div class="bigspacer"></div>
+      <h2>Publications</h2>
+        
+          
+          
+          
+            
+              
+              
+              
+      <p>
+        <a class="off" href="/publications/zhang-correlated-dynamics/">
+          Long-range correlated dynamics in ultra-thin molecular glass films
+        </a>
+      </p>
+        
+          
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+              
+      <p>
+        <a class="off" href="/publications/shavit-polymer-aging/">
+          Physical Aging, the Local Dynamics of Glass-Forming Polymers under Nanoscale Confinement
+        </a>
+      </p>
+        
+          
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+              
+      <p>
+        <a class="off" href="/publications/shavit-strain-localization/">
+          Strain localization in glassy polymers under cylindrical confinement
+        </a>
+      </p>
+        
+          
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+              
+      <p>
+        <a class="off" href="/publications/shavit-backbone-rigidity/">
+          Influence of Backbone Rigidity on Nanoscale Confinement Effects in Model Glass-Forming Polymers
+        </a>
+      </p>
+        
+          
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+              
+      <p>
+        <a class="off" href="/publications/torres-chain-stiffness/">
+          Influence of Chain Stiffness on Thermal and Mechanical Properties of Polymer Thin Films
+        </a>
+      </p>
+        
+          
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+              
+      <p>
+        <a class="off" href="/publications/riggleman-free-volume/">
+          Free Volume and Finite-Size Effects in a Polymer Glass under Stress
+        </a>
+      </p>
+        
+          
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+              
+      <p>
+        <a class="off" href="/publications/riggleman-confinement-fragility/">
+          Influence of Confinement on the Fragility of Antiplasticized and Pure Polymer Films
+        </a>
+      </p>
+        
+      
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+
+  <div class="bigspacer"></div>
+  <div class="spacer"></div>
+
+</div>
+
+    </div>
+  </div>
+
+  <div id="footer">
+    <nav class="navbar navbar-inverse text-center" role="navigation">
+      <div class="container">
+        <ul class="nav navbar-nav footernav">
+          <li>
+            <a href="/about/">About</a>
+          </li>
+          <li>
+            <a href="/contact/">Contact</a>
+          </li>
+          <li>
+            <a href="/collaborate/">Collaborate</a>
+          </li>
+          <li>
+            <a href="/join/">Join</a>
+          </li>
+        </ul>
+      </div>
+      <div id="footer-logo-box" class="container">
+        <ul class="nav navbar-nav footernav">
+          <li>
+            <a id="cbe-text" href="http://cbe.seas.upenn.edu/">
+              University of Pennsylvania</br>
+              Chemical and Biomolecular Engineering Department</br>
+            </a>
+          </li>
+        </ul>
+        <div id="footer-logo" class="center-block">
+          <a href="http://cbe.seas.upenn.edu/">
+            <img id="pennimg" src="/images/upenn-footer-logo.png">
+          </a>
+        </div>
+      </div>
+      <div class="spacer"></div>
+    </nav>
+  </div>
+
+</body>
+</html>
