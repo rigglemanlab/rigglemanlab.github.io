@@ -32,6 +32,10 @@
   </script>
   <!-- END Google Analytics -->
 
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"">
+  </script>
+
   <!-- jQuery -->
   <script src="/js/jquery.min.js"></script>
 
@@ -95,8 +99,32 @@
   <div class="col-md-12">
     <h1>Research</h1>
     <hr/>
-    Here's a statement about the research we do here in the Riggleman Lab.
-    Blah Blah...
+    The research in our group uses theory and simulation to address both
+    fundamental and engineering questions in a wide family of problems in soft
+    matter.
+
+    A theme that spans much of our work is understanding how nanoscale
+    confinement affects the properties of soft materials relevant for
+    engineering applications.
+
+    In glass-forming materials, such as polymer glasses and small-molecule
+    organic glasses, we study how the dynamics and mechanical properties are
+    influenced by interfaces.
+
+    In polymer nanocomposites we study how the presence of interfaces and
+    processing and can exploited to tune the distribution of particles in
+    inhomogeneous polymeric materials, such as polymer blends and block
+    copolymers.
+
+    A second broad area of interest for the group is in the mechanical and
+    rheological properties of disordered solids, where we have developed new
+    models to study brittle failure in glasses and power law rheology is soft
+    fluids.
+
+    Our modeling philosophy is always to use the simplest model possible that
+    captures the essential physics; this necessarily involves the use of highly
+    coarse-grained approaches that do not retain substantial chemical detail,
+    and our methods are tested through careful comparisons to experiments.
   </div>
 </div>
 
@@ -106,11 +134,11 @@
 <ol>
 
   <li>
-    <a data-scroll href="#topic1">Dynamic Mean-Field Theory</a>
+    <a data-scroll href="#topic1">Polymer Nanocomposite Field Theory</a>
   </li>
 
   <li>
-    <a data-scroll href="#topic2">Polymer Nanocomposite Field Theory</a>
+    <a data-scroll href="#topic2">Dynamic Mean-Field Theory</a>
   </li>
 
   <li>
@@ -136,50 +164,19 @@
 
 <div class="row">
   <div class="col-md-12">
-    <h1 id="topic1">Dynamic Mean-Field Theory</h1>
-    <hr/>
-    
-    <img class="offset" width=50% src="/images/research/dmft.png">
-    
-    <div class="post">
-      <p>Dynamic Mean-Field Theory is a cool simulation framework with the following awesome description: blah blah blah.</p>
-
-    </div>
-    
-    <div class="bigspacer"></div>
-    <h2>Publications</h2>
-      
-        
-        
-        
-          
-        
-          
-        
-          
-            
-            
-            
-    <p><a href="/publications/chao-solvent-annealing/">Solvent vapor annealing in block copolymer nanocomposite films: a dynamic mean field approach</a></p>
-      
-    
-  </div>
-</div>
-
-    <div class="bigspacer"></div>
-    <div class="bigspacer"></div>
-  
-    
-
-<div class="row">
-  <div class="col-md-12">
-    <h1 id="topic2">Polymer Nanocomposite Field Theory</h1>
+    <h1 id="topic1">Polymer Nanocomposite Field Theory</h1>
     <hr/>
     
     <img class="offset" width=50% src="/images/research/pnc-ft.png">
     
     <div class="post">
-      <p>Polymer Nanocomposite Field Theory is a cool simulation framework with the following awesome description: blah blah blah.</p>
+      <p>A major thrust in our group involves the development of novel field theoretic simulations (FTS) techniques for the study of systems that can only be crudely modeled by existing methods. FTS are a broad class of numerical approaches that include self-consistent field theory (SCFT), which is a ubiquitous method for studying polymer melts, blends, solutions, and block copolymers. This family of methods is a highly coarse-grained description of a system where polymers are typically modeled as Gaussian chains with purely local interactions. After writing down the partition function for such a model, one uses a particle-to-field transformation to exactly transform the model to a statistical field theory that can be evalulated numerically on a collocation grid or attacked with a variety of analytical techniques. The advantage of the FTS framework is that one can frequently resolve the model using significantly fewer collocation points in the field theory than there are particles in the underlying model, leading to more efficient simulations.</p>
+
+<p>A significant shortcoming of many current implementations of polymer field theory is that they completely miss correlations due to excluded volume, which makes this approach invalid for systems where correlations become important. This includes capturing the packing of monomers near a hard wall, or capturing the manner in which nanoparticles would affect the conformations available to a polymer chain. Correlations are missed because the monomer densities are typically described as point particles (mathematically, the density is defined as a sum of delta functions, <script type="math/tex">\hat{\rho}(r) = \sum_i \delta(r-r_i)</script>), and the interactions are purely local. A pair potential would be of the form <script type="math/tex">u(r) = \chi \delta(r)</script>, so monomers would only interact when they are precisely on top of each other. This is clearly inadequate if one wishes to include objects such as nanoparticles that are significantly larger than a typical monomer size.</p>
+
+<p>Our approach has been to show that by simply using a “smearing” function that describes the shape of the monomer, we can move beyond the point-particle approximation to include objects of a finite size (e.g., nanoparticles) in our theories. We simply replace our microscopic density function with a sum over these smearing functions, <script type="math/tex">\hat{\rho}(r) = \sum_i \Gamma(r-r_i)</script> where <script type="math/tex">\Gamma(r)</script> describes the shape of the object, as shown in <a href="/publications/koski-pncft/">Koski et al., 2013</a>. We call this framework polymer nanocomposite field theory (PNC-FT); it is a generalization of the prior hybrid particle/field theory pioneered by <a href="https://doi.org/10.1103/PhysRevLett.96.250601">Sides et al.</a>, and our approach enables efficient study of the fully fluctuating field theory using the complex Langevin technique.</p>
+
+<p>There are few limitations on the choice of the smearing function, which enables us to study a wide range of polymer nanocomposite systems. We typically use a Gaussian distribution to describe the distribution of mass within a coarse-grained polymer monomer and spherical step functions with a soft interface to describe the shape of spherical nanoparticles. It is also possible to employ anisotropic smearing functions, enabling us to study rod- and plate-like nanoparticles. We have also further extended the theory to describe polymer-grafted nanoparticles with arbitrary grafting architecture such as <a href="/publications/chao-distribution-nanoparticles/">homopolymer grafting</a>, grafting with mixtures of polymers, block copolymers, and Janus grafting, which has allowed us to study the interfacial activity of different designs of grafted nanoparticles and their effect on the interfacial tension in polymer (see <a href="/publications/koski-predicting-structure/">Koski et al., 2015</a>) blends.</p>
 
     </div>
     
@@ -301,6 +298,45 @@
             
             
     <p><a href="/publications/koski-pncft/">Field theoretic simulations of polymer nanocomposites</a></p>
+      
+    
+  </div>
+</div>
+
+    <div class="bigspacer"></div>
+    <div class="bigspacer"></div>
+  
+    
+
+<div class="row">
+  <div class="col-md-12">
+    <h1 id="topic2">Dynamic Mean-Field Theory</h1>
+    <hr/>
+    
+    <img class="offset" width=50% src="/images/research/dmft.png">
+    
+    <div class="post">
+      <p>One of our major methodological developments has been our ability to translate our PNC-FT models to the recently-proposed dynamic mean-field theory (DMFT) outlined by <a href="http://dx.doi.org/10.1063/1.4865911">Fredrickson and Orland</a>, which enables us to study the same family of models using a <a href="/publications/chao-solvent-annealing/">dynamic theory</a> that can qualitatively capture the effects of processing on the structure of inhomogeneous polymer nanocomposites. The framework is qualitatively similar to the single-chain in mean-field (SCMF) approach of <a href="http://dx.doi.org/10.1063/1.2364506">Mueller et al.</a> and the self-consistent Brownian dynamics (SCBD) method of <a href="http://dx.doi.org/10.1063/1.1557052">Ganesan et al.</a>, but the solid theoretical basis provided by Fredrickson and Orland provides the possibility for systematically improving the methods by <a href="http://dx.doi.org/10.1063/1.459082">adding hydrodynamic interactions</a>, for example.</p>
+
+<p>We have employed our dynamic mean field theory (DMFT) to study how solvent annealing affects the distribution of nanoparticles in block copolymer thin films (see image above). Solvent annealing is a process through which a block copolymer thin film is exposed to the vapor of a volatile solvent, which absorbs into the film, swelling and plasticizing the block copolymer. Solvent vapor annealing is widely used to reduce the density of defects in block copolymer films, and it is finding increased usage in block copolymer nanocomposite thin films. We have shown that for lamellar films swollen with a neutral solvent, if we tune the interfacial activity of the nanoparticles by varying the grafting density of polymers on the particle surface, we can tune the equilibrium distribution of nanoparticles. At some particular surface chemistries, we find that the solvent will displace the particles from the free surface, leading to interfacially-active particles becoming mixed in the polymer film. Under these conditions, when the solvent is rapidly evaporated from the film, we can trap the particles in the distribution they adopt in the swollen state. However, if the solvent is removed slowly, then the particles have sufficient time to anneal back to their equilibrium distribution in the dry state. <a href="/publications/chao-solvent-annealing/">This work</a> was recently published in <em>Soft Matter</em>.</p>
+
+    </div>
+    
+    <div class="bigspacer"></div>
+    <h2>Publications</h2>
+      
+        
+        
+        
+          
+        
+          
+        
+          
+            
+            
+            
+    <p><a href="/publications/chao-solvent-annealing/">Solvent vapor annealing in block copolymer nanocomposite films: a dynamic mean field approach</a></p>
       
     
   </div>
